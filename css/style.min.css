@@ -243,6 +243,81 @@
   color: #6DFFEE;
 }
 
+@media (max-width: 800px) {
+  html {
+    font-size: 14px;
+  }
+  .title {
+    width: 100%;
+  }
+  .title a {
+    letter-spacing: 0px;
+  }
+  nav > .toggle-btn {
+    display: block;
+    color: white;
+    cursor: pointer;
+  }
+  .navbar-links {
+    display: inline-block;
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    top: 70px;
+    right: -100%;
+    background-color: rgb(38, 38, 38);
+    transition: all 0.2s ease-in-out;
+    padding: 20px;
+  }
+  .navbar-links ul {
+    flex-direction: column;
+  }
+  .navbar-links li {
+    margin-top: 5px;
+    padding: 0.4rem 1rem;
+  }
+  .show {
+    right: 0;
+  }
+  .mainContent .text {
+    font-size: 1rem;
+  }
+  .btn {
+    font-size: 0.8rem;
+  }
+  .contentsContainer h1 {
+    font-size: 1rem;
+  }
+  .contentsContainer .postCard {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+  .contentsContainer .postCard img {
+    display: none;
+    background-color: red;
+  }
+  .contentsContainer .postCard .cardContent .text {
+    font-size: 0.9rem;
+    width: 100%;
+    background-color: red;
+  }
+  .contentsContainer .postCard .btn:last-child {
+    margin-top: 10px;
+  }
+  .projectsContainer .languages div.card {
+    width: 100%;
+  }
+  .projectsContainer .languages div.card img {
+    width: 100%;
+  }
+  .projectsContainer .languages div.card div.likes > .btn:last-child {
+    display: none;
+  }
+  .contactContainer h1 {
+    font-size: 1.6rem;
+  }
+}
 * {
   box-sizing: border-box;
   padding: 0;
@@ -258,7 +333,7 @@
 .contact {
   width: 100%;
   height: 100%;
-  background: url("./images/Meteor.svg") no-repeat center center/cover;
+  background-image: linear-gradient(0deg, rgb(216, 243, 255), rgb(138, 216, 255), rgb(106, 187, 227));
 }
 
 a {
@@ -266,22 +341,46 @@ a {
 }
 
 .navbar {
-  height: 70px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 70px;
 }
-.navbar .title {
-  display: inline-block;
-  font-size: 2.5rem;
-  cursor: pointer;
-  font-weight: 700;
-  letter-spacing: 10px;
+
+.brand-title {
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
-.navbar .title a {
+.brand-title a {
   color: #fff;
-  font-family: "Koulen";
+  font-weight: 700;
+}
+
+.navbar-links ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li {
+  list-style: none;
+  text-align: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-links li:hover {
+  background-color: rgb(97, 110, 106);
+}
+
+.toggle-btn {
+  display: none;
 }
 
 .mainContent {
@@ -293,7 +392,8 @@ a {
   height: 100vh;
 }
 .mainContent h1 {
-  font-family: "Koulen";
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
 }
 .mainContent p {
   font-family: Arial, Helvetica, sans-serif;
@@ -313,13 +413,12 @@ a {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 2%;
 }
 .projectsContainer .languages h2 {
   width: 100%;
 }
 .projectsContainer .languages .card {
-  width: 49%;
+  width: 50%;
   background-color: transparent;
   margin-bottom: 20px;
 }
@@ -346,12 +445,11 @@ a {
   border: 1px solid rgba(189, 178, 178, 0.733);
 }
 .contentsContainer .postCard img {
-  max-width: 10%;
-  width: 80%;
+  width: 10%;
   height: min-content;
 }
 .contentsContainer .postCard .cardContent {
-  width: 90%;
+  width: 100%;
 }
 .contentsContainer .postCard .cardContent p {
   text-indent: 5%;
