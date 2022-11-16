@@ -261,13 +261,14 @@
   .navbar-links {
     display: inline-block;
     position: absolute;
-    width: 60%;
+    width: 70%;
     height: 100%;
     top: 70px;
-    right: -100%;
+    left: -100%;
     background-color: rgb(38, 38, 38);
     transition: all 0.2s ease-in-out;
     padding: 20px;
+    z-index: 1;
   }
   .navbar-links ul {
     flex-direction: column;
@@ -277,7 +278,8 @@
     padding: 0.4rem 1rem;
   }
   .show {
-    right: 0;
+    left: 0;
+    top: 70px;
   }
   .mainContent .text {
     font-size: 1rem;
@@ -326,13 +328,11 @@
 
 .main {
   width: 100%;
-  height: 100%;
   background: url("./images/mountains.jpg") no-repeat center center/cover;
 }
 
 .contact {
   width: 100%;
-  height: 100%;
   background-image: linear-gradient(0deg, rgb(216, 243, 255), rgb(138, 216, 255), rgb(106, 187, 227));
 }
 
@@ -390,6 +390,7 @@ a {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
+  z-index: -1;
 }
 .mainContent h1 {
   font-family: Arial, Helvetica, sans-serif;
